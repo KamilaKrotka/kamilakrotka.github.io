@@ -7,15 +7,17 @@ body {
 }
 header {
     background-color: #FAFAFA;
-    padding: 20px;
     text-align: center;
     position: relative;
+	justify-content: space-between;
+    padding: 20px;
 }
 /* To change the logo */
 .logo {
     position: absolute;
+	padding-top: 10px;
     top: 20px;
-    left: 20px;
+    left: 40px;
 }
 .logo img {
     width: 50px;
@@ -26,18 +28,20 @@ header {
 nav {
     position: absolute;
 	display: flex;
-    top: 40px;
+    top: 20px;
     right: 40px;
 }
 nav a {
-    margin: 0 15px;
+    margin: 0;
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 20px 20px;
     border: 2px solid transparent;
     transition: border 0.3s ease-in-out;
 	position: relative;
+	display: inline-block;
+
 }
 nav a:hover {
     border-bottom: 2px solid #333;
@@ -88,10 +92,13 @@ nav a:hover {
 
 .container {
     max-width: 1000px;
-    margin: 100px auto 20px;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 0 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	left: 20px;
     background-color: #FAFAFA;
-    text-align: center;
+    text-align: left;
 }
 h1, h2 {
     color: #214244;
@@ -112,6 +119,7 @@ section {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+
 }
 
 .project img {
@@ -127,17 +135,26 @@ section {
 
 /*Image Background*/
 .abstract-shapes {
-    position: absolute;
-    top: 120px;
-    right: 20px;
-    width: 300px;
-    height: 200px;
+    position: relative;
+    top: 40px;
+    max-width: 100%;
+    height: auto;
     z-index: -1;
+	justify-content: space-between;
+	padding: 20px;
 }
 .abstract-shapes img {
     width: 100%;
     height: auto;
 }
+
+.description-photo {
+    display: block;
+    margin: 20px auto;
+    max-width: 150px;
+    height: auto;
+}
+
 /*Footer*/
 footer {
     text-align: center;
@@ -147,13 +164,14 @@ footer {
 }
 
 .portfolio {
-    padding: 20px;
+    padding: 10px 15px;
 }
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
     gap: 20px;
+
 }
 
 .portfolio-box {
@@ -163,6 +181,8 @@ footer {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
+	left: 20px;
+
 }
 
 .portfolio-box:hover {
@@ -179,8 +199,8 @@ footer {
 
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -20px;
+    left: -20px;
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
@@ -202,8 +222,9 @@ footer {
 .pdf-link {
     display: inline-block;
     margin-top: 10px;
+	margin-bottom: 20px;
     padding: 10px 15px;
-    background-color: #FAFAFA;
+    background-color: #6E6E6E;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -211,5 +232,5 @@ footer {
 }
 
 .pdf-link:hover {
-    background-color: #0056b3;
+    background-color: #4D4D4D;
 }
