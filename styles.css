@@ -151,8 +151,87 @@ section {
 .description-photo {
     display: block;
     margin: 20px auto;
+	padding-bottom: 15px;
     max-width: 150px;
     height: auto;
+}
+
+/* Styles for two-column text using Flexbox */
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+	margin-left: 20px;
+    text-align: center; /* Align text to the left for readability */
+    font-size: 16px;  /* Consistent font size */
+    line-height: 1.3; /* Consistent line height */
+    color: #333;
+	column-gap: 0;
+}
+
+.column {
+    flex: 1;            /* Each column takes equal space */
+    padding: 0 10px;    /* Padding between columns */
+}
+
+.column p {
+    font-size: inherit; /* Inherit font size from parent for consistency */
+    line-height: inherit; /* Inherit line height from parent */
+    color: #444;
+}
+
+/* Styles for centering specific titles */
+.centered-title {
+    text-align: center;  /* Center text within the container */
+	margin-left: 10px;
+    font-weight: bold;   /* Make the text bold */
+    margin-bottom: 10px; /* Adds space between title and following content */
+    font-size: 40px;     /* Adjust font size as needed */
+}
+
+/* Styles for three-column section */
+.three-columns-section {
+    margin-top: 30px; /* Add margin to separate from previous sections */
+}
+
+.three-columns {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 1200px; /* Optional: Limit the maximum width */
+    padding: 20px;
+}
+
+.three-columns .column {
+    flex: 1;
+    padding: 10px;
+}
+
+.column-title {
+    text-align: center; /* Center the column titles */
+    font-weight: bold; /* Make the titles bold */
+    margin-bottom: 10px; /* Add space between the title and list */
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+.column ul {
+    list-style-type: none; /* Remove list bullets */
+    padding: 0; /* Remove default padding */
+	 text-align: center;
+}
+
+.column li {
+    margin-bottom: 5px; /* Add space between list items */
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.5; /* Improve readability */
+	
+}
+
+h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /*Footer*/
