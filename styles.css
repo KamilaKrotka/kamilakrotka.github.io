@@ -283,6 +283,14 @@ footer {
     gap: 20px;
 }
 
+.portfolio-grid-one {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60%, 1fr));
+    gap: 20px;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
 .portfolio-box {
     position: relative;
     overflow: hidden;
