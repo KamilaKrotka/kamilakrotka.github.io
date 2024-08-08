@@ -380,14 +380,14 @@ footer {
     }
 
     nav {
-        top: 10px;
+        top: 20px;
         right: 10px;
-        font-size: 16px; /* Increased font size for better readability */
+        font-size: 24px; /* Increased font size for better readability */
     }
 
     nav a {
-        padding: 10px;
-        font-size: 16px;
+        padding: 5px;
+        font-size: 24px;
     }
 
     .container {
@@ -402,8 +402,8 @@ footer {
 
     .full-width-background {
         padding: 10px;
-        max-height: none;
-        width: 100%; /* Ensure it spans the full width */
+        max-height: 90%;
+        width: 95%; /* Ensure it spans the full width */
     }
 
     .background-content {
@@ -414,9 +414,10 @@ footer {
     }
 
     .description-photo {
-        max-width: 80%; /* Reduce the image size */
+        max-width: 60%; /* Reduce the image size */
         height: auto;
         margin: 0 auto; /* Center the photo */
+		padding-left: 15px;
     }
 
     .name-photo {
