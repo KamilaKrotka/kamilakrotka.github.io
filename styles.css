@@ -329,7 +329,7 @@ footer {
 }
 
 .portfolio-box:hover .overlay {
-    opacity: 1;
+    opacity: 3;
 }
 
 .pdf-link {
