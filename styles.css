@@ -348,65 +348,109 @@ footer {
     background-color: #4D4D4D;
 }
 
+/* Existing styles here */
+
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
     header {
         padding: 10px;
         text-align: left;
     }
+
     .logo {
-        top: 10px;
-        left: 20px;
-        padding-top: 0;
+        top: 5px;
+        left: 10px;
     }
+
     .logo img {
         width: 40px;
         height: 40px;
     }
+
     nav {
-        top: 15px;
-        right: 20px;
-        font-size: 16px;
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
     }
+
     nav a {
         padding: 10px;
-        font-size: 16px;
+        font-size: 14px;
     }
+
     .container {
-        padding: 10px 20px;
+        padding: 10px;
+        width: 100%;
     }
+
     .project-grid {
-        grid-template-columns: 1fr; /* One project per row on mobile */
+        grid-template-columns: 1fr; /* One project per row */
         gap: 15px;
     }
+
+    .full-width-background {
+        padding: 10px;
+        max-height: none;
+    }
+
     .background-content {
         flex-direction: column;
         height: auto;
-        text-align: center;
         padding: 10px;
+        text-align: center;
     }
+
     .description-photo, .name-photo {
-        padding-left: 0;
-        padding-top: 20px;
         max-width: 100%;
+        text-align: center;
+        padding: 10px 0;
         font-size: 40px;
     }
+
     .two-columns {
         flex-direction: column;
         margin: 10px 0;
+        padding: 0;
     }
+
+    .column {
+        padding: 10px 0;
+        text-align: left;
+    }
+
     .three-columns {
         flex-direction: column;
         padding: 15px;
     }
-    .column {
+
+    .three-columns .column {
         padding: 10px 0;
+        text-align: center;
     }
+
     .portfolio-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
-        gap: 15px;
+        grid-template-columns: 1fr; /* Single column */
+        gap: 10px;
     }
+
     .portfolio-box {
         margin-bottom: 20px;
+    }
+
+    .overlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .pdf-link {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
     }
 }
