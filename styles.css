@@ -347,3 +347,66 @@ footer {
 .pdf-link:hover {
     background-color: #4D4D4D;
 }
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        text-align: left;
+    }
+    .logo {
+        top: 10px;
+        left: 20px;
+        padding-top: 0;
+    }
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    nav {
+        top: 15px;
+        right: 20px;
+        font-size: 16px;
+    }
+    nav a {
+        padding: 10px;
+        font-size: 16px;
+    }
+    .container {
+        padding: 10px 20px;
+    }
+    .project-grid {
+        grid-template-columns: 1fr; /* One project per row on mobile */
+        gap: 15px;
+    }
+    .background-content {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 10px;
+    }
+    .description-photo, .name-photo {
+        padding-left: 0;
+        padding-top: 20px;
+        max-width: 100%;
+        font-size: 40px;
+    }
+    .two-columns {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    .three-columns {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .column {
+        padding: 10px 0;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 15px;
+    }
+    .portfolio-box {
+        margin-bottom: 20px;
+    }
+}
