@@ -176,8 +176,9 @@ section {
 	padding-top: 50px;
 	padding-bottom: 15px;
 	padding-left: 100px;
-    max-width: 150px;
-    height: auto;	
+    max-width: 120px;
+    width: 120px; /* Smaller width for mobile */
+    height: 120px;	
 }
 
 .name-photo{
@@ -416,11 +417,12 @@ footer {
     }
 
     .description-photo {
-        max-width: 60%; /* Reduce the image size */
-        height: auto;
+        width: 170px; /* Smaller width for mobile */
+        height: 170px;
         margin: 0 auto; /* Center the photo */
-		padding-left: 5px;
+		padding-left: 0;
 		padding-top: 10px; /* Adjust this value */
+		max-width: 170px;
     }
 
     .name-photo {
