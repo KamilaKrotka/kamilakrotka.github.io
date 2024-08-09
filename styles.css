@@ -270,7 +270,7 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #FAFAFA;
-    margin-top: 20px;
+    padding-top: 5px;
 }
 
 .portfolio {
@@ -359,7 +359,7 @@ footer {
 /* Existing styles here */
 
 /* Responsive Design for Mobile */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     body {
         padding: 10px;
     }
@@ -382,17 +382,17 @@ footer {
     nav {
         top: 20px;
         right: 10px;
-        font-size: 24px; /* Increased font size for better readability */
+        font-size: 20px; /* Increased font size for better readability */
     }
 
     nav a {
         padding: 5px;
-        font-size: 24px;
+        font-size: 20px;
     }
 
-    .container {
-        padding: 10px;
-        width: 100%;
+     .container {
+        padding: 10px; /* Reduced padding for better fit */
+		
     }
 
     .project-grid {
@@ -401,9 +401,10 @@ footer {
     }
 
     .full-width-background {
-        padding: 10px;
+        padding: 5px;
         max-height: 90%;
         width: 95%; /* Ensure it spans the full width */
+		margin-bottom: 5px;
     }
 
     .background-content {
@@ -417,7 +418,8 @@ footer {
         max-width: 60%; /* Reduce the image size */
         height: auto;
         margin: 0 auto; /* Center the photo */
-		padding-left: 15px;
+		padding-left: 5px;
+		padding-top: 10px; /* Adjust this value */
     }
 
     .name-photo {
@@ -428,20 +430,30 @@ footer {
     }
 
     .two-columns {
-        flex-direction: column;
-        margin: 10px 0;
-        padding: 0;
+        flex-direction: column; /* Stack columns vertically */
+        gap: 0; /* Reduce gap between sections */
+        margin: 10px 0; /* Reduce margin between sections */
     }
 
     .column {
-        padding: 10px 0;
         text-align: left;
+		padding-bottom: 10px;
     }
-
+	
+	.column p {
+		font-size: inherit;
+		line-height: inherit;
+		color: #333;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	
+	}
+	
     .three-columns {
         flex-direction: column;
-        padding: 15px;
+        padding: 5px;
         text-align: center;
+	
     }
 
     .three-columns .column {
@@ -454,8 +466,28 @@ footer {
     }
 
     .portfolio-box {
-        margin-bottom: 20px;
-        text-align: center; /* Center-align text */
+        padding: 10px; /* Reduced padding inside the box */
+        margin-bottom: 20px; /* Reduced margin between boxes */
+    }
+	
+	.portfolio-box img {
+        width: 100%; /* Ensure full width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Consistent border radius */
+    }
+
+	
+	 h2 {
+        font-size: 20px; /* Adjust font size for headings */
+        margin: 10px 0; /* Adjust margin around headings */
+	    text-align: center;
+    }
+
+    p {
+        font-size: 16px; /* Adjust font size for paragraph text */
+        line-height: 1.4; /* Improve readability */
+		padding-bottom: 2px;
+	
     }
 
     .overlay {
@@ -463,11 +495,11 @@ footer {
         left: 0;
         width: 100%;
         height: 100%;
-        padding: 15px; /* Add padding for text */
+        padding: 0; /* Add padding for text */
     }
 
     .pdf-link {
-        width: 100%;
+        width: 50%;
         text-align: center;
         padding: 10px 0;
     }
