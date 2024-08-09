@@ -403,7 +403,7 @@ footer {
     .full-width-background {
         padding: 5px;
         max-height: 90%;
-        width: 95%; /* Ensure it spans the full width */
+        width: 98%; /* Ensure it spans the full width */
 		margin-bottom: 5px;
     }
 
