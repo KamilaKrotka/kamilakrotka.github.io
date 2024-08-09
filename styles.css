@@ -465,6 +465,14 @@ footer {
         gap: 10px;
     }
 
+    .portfolio-grid-one {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60%, 1fr));
+    gap: 20px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
     .portfolio-box {
         padding: 10px; /* Reduced padding inside the box */
         margin-bottom: 20px; /* Reduced margin between boxes */
@@ -480,6 +488,7 @@ footer {
 	 h2 {
         font-size: 20px; /* Adjust font size for headings */
         margin: 10px 0; /* Adjust margin around headings */
+		padding-left: 5px;
 	    text-align: center;
     }
 
