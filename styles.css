@@ -391,6 +391,7 @@ footer {
     }
 
      .container {
+		max-width: 95%;
         padding: 10px; /* Reduced padding for better fit */
 		
     }
