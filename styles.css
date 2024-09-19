@@ -191,12 +191,6 @@ section {
     color: #333; /* Text color */
 }
 
-.name-photo .title {
-    font-size: 18px; /* Adjust the size */
-    color: #555; /* Choose a color */
-    margin-top: 5px; /* Add spacing between the name and title */
-}
-
 /* Styles for two-column text using Flexbox */
 .two-columns {
     display: flex;
