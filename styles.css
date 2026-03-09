@@ -1,5 +1,5 @@
 body {
-    font-family: 'Inconsolata';
+    font-family: 'Inter', sans-serif;
     color: #333;
     background-color: #FAFAFA;
     margin: 0;
@@ -27,12 +27,12 @@ header {
 /* To change the menu */
 nav {
     position: absolute;
-	display: flex;
+    display: flex;
     top: 25px;
     right: 40px;
-	font-family: 'League Spartan';
-	font-size: 19px;
-	color: #444;
+    font-family: 'League Spartan';
+    font-size: 19px;
+    color: #444;
 }
 nav a {
     margin: 0;
@@ -40,19 +40,25 @@ nav a {
     color: #333;
     font-weight: bold;
     padding: 20px 20px;
-    border: 2px solid transparent;
-    transition: border 0.3s ease-in-out;
-	position: relative;
-	display: inline-block;
-
+    /* no border underline */
+    transition: color 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
 }
-nav a:hover {
-    border-bottom: 2px solid #333;
+nav a:hover,
+nav a:focus,
+nav a:active {
+    text-decoration: none;
+    /* do not add a border-bottom */
+    color: #FF5A5F; /* just change the text colour */
 }
 .menu_over {
     position: relative;
-	padding-bottom: -5px;
+    padding-bottom: -5px;
+}
 
+.menu_over:hover {
+    color: #FF5A5F;
 }
 
 .submenu {
@@ -98,13 +104,34 @@ nav a:hover {
     margin: 0 auto;
     padding: 0 50px;
 	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 	left: 20px;
     background-color: #FAFAFA;
     text-align: left;
 }
 h1, h2 {
     color: #214244;
+    font-size:32px;
+}
+
+h3 {
+    color: #214244;
+    font-size: 32px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #214244;
+    width: 0;
+    display: inline-block;
+    animation: typing 0.4s steps(4) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 3.5ch; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
 p {
@@ -159,10 +186,29 @@ section {
     background-color: #E5E9F5;
     width: 100%; /* Full width of the viewport */
     padding: 0; /* Add vertical padding for spacing */
-    margin-top: 0;
-	border-radius: 10px;
-	max-height: 180px;
+    margin-top: 40px;
+    border-radius: 10px;
+    max-height: 180px;
+    animation: fadeInUp 0.8s ease-out;
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .full-width-background {
+        animation: none;
+    }
+}
+
 
 /* Center the content within the full-width background */
 .background-content {
@@ -175,45 +221,86 @@ section {
 }
 
 .description-photo {
-	padding-top: 50px;
-	padding-bottom: 15px;
-	padding-left: 100px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    padding-left: 100px;
     max-width: 120px;
     width: 120px;
-    height: 120px;	
+    height: 120px;
 }
 
-.name-photo{
-	max-width: 50%; /* Limit the width of the text */
-    font-size: 60px; /* Adjust font size as needed */
-	font-family: 'League Spartan';
-	padding-left: 15px;
-	padding-top: 55px;
-    line-height: 1.5; /* Improve readability */
-    color: #333; /* Text color */
-}
-
-/* Styles for two-column text using Flexbox */
-.two-columns {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5px;
-	margin-left: 20px;
-    text-align: center; /* Align text to the left for readability */
-    font-size: 16px;  /* Consistent font size */
-    line-height: 1.3; /* Consistent line height */
+.name-photo {
+    display: inline-flex;
+    font-size: 60px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-top: 55px;
+    line-height: 0.8;
     color: #333;
-	column-gap: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
+
+.key {
+    display: inline-block;
+}
+
+/* KEYBOARD PRESS ANIMATION */
+@keyframes press {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(10px);
+    }
+    20% {
+        transform: translateY(0);
+    }
+}
+
+/* Animation only on entrance, disappears after 3 seconds */
+
+.key:nth-child(1) { animation: press 2.3s 1; }
+.key:nth-child(2) { animation: press 3.1s 1 0.4s; }
+.key:nth-child(3) { animation: press 2.7s 1 0.2s; }
+.key:nth-child(4) { animation: press 3.6s 1 0.8s; }
+.key:nth-child(5) { animation: press 2.4s 1 0.3s; }
+.key:nth-child(6) { animation: press 3.8s 1 0.6s; }
+.key:nth-child(7) { animation: press 2.2s 1 0.1s; }
+.key:nth-child(8) { animation: press 3.3s 1 0.5s; }
+.key:nth-child(9) { animation: press 2.9s 1 0.7s; }
+.key:nth-child(10) { animation: press 3.4s 1 0.9s; }
+.key:nth-child(11) { animation: press 2.6s 1 0.4s; }
+.key:nth-child(12) { animation: press 3.2s 1 0.2s; }
+.key:nth-child(13) { animation: press 2.8s 1 0.6s; }
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .key {
+        animation: none;
+    }
+}
+
 
 .column {
-    flex: 1;            /* Each column takes equal space */
-    padding: 0 10px;    /* Padding between columns */
+    flex: 1;
+    padding: 0 10px;
 }
 
-.column .column-title{
-    text-align: center; /* Center the column titles */
-	color: #E5E9F5;
+.column .column-title {
+    text-align: center;
+    color: #E5E9F5;
+}
+
+/* Add default link style */
+.column a {
+    color: #E5E9F5;          /* replaces "color: inherit" */
+    text-decoration: none;   /* replaces "text-decoration: none" */
+    transition: color 0.2s ease;
+}
+
+.column a:hover {
+    color: #FF5A5F;
 }
 
 .column p {
@@ -226,6 +313,36 @@ section {
 .centered-title {
     text-align: center;  /* Center text within the container */
 	color: #333;
+}
+
+.two-columns-section {
+  padding: 40px 20px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.two-columns {
+  display: flex;
+  gap: 40px;
+}
+
+.column {
+  flex: 1;
+}
+
+.centered-title {
+  margin-bottom: 20px;
+}
+
+.column p {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .two-columns {
+    flex-direction: column;
+  }
 }
 
 /* Styles for three-column section */
@@ -265,7 +382,6 @@ section {
     line-height: 1.5; /* Improve readability */
 	
 }
-
 
 /*Footer*/
 footer {
@@ -355,7 +471,7 @@ footer {
 }
 
 .pdf-link:hover {
-    background-color: #4D4D4D;
+    background-color: #FF5A5F;
 }
 
 /* Existing styles here */
@@ -433,14 +549,42 @@ footer {
         font-size: 40px;
     }
 
-    .two-columns {
-        flex-direction: column; /* Stack columns vertically */
-        gap: 0; /* Reduce gap between sections */
-        margin: 10px 0; /* Reduce margin between sections */
-    }
+.column {
+    flex: 1;            /* Each column takes equal space */
+    padding: 0 10px;    /* Padding between columns */
+}
 
+.column .column-title{
+    text-align: center; /* Center the column titles */
+	color: #E5E9F5;
+}
+
+.column p {
+    font-size: inherit; /* Inherit font size from parent for consistency */
+    line-height: inherit; /* Inherit line height from parent */
+    color: #333;
+}
+
+/* Styles for centering specific titles */
+.centered-title {
+    text-align: center;  /* Center text within the container */
+	color: #333;
+
+/* Single item spacing */
+.resume-item {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .resume-columns {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
     .column {
-        text-align: left;
+        text-align: center;
 		padding-bottom: 10px;
     }
 	
